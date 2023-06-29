@@ -10,7 +10,7 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Compra Realizada</title>
+        <title>Editar orador</title>
         <link rel="shortcut icon" href="./img/codoacodo.png" type="image/x-icon" />
 
         <!-- Bootstrap CDN -->
@@ -27,7 +27,7 @@
     <body>
         <jsp:include page="./componentes/barra_navegacion.jsp"/>
         
-        <jsp:include page="./confirmacion_compra/cuerpo_confirmacion_compra.jsp"/>
+        <jsp:include page="./edicion_orador/cuerpo_edicion_orador.jsp"/>
         
         <jsp:include page="./componentes/pie_pagina.jsp"/>
         

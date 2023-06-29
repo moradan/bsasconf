@@ -9,7 +9,7 @@
             <!-- tarjeta que representa el ticket -->
             <section class="card shadow mb-5">
                 <div class="card-body p-5">
-                    <div class="card-title fs-1 fw-bold text-uppercase text-center">
+                    <div class="card-title fs-2 fw-bold text-uppercase text-center">
                         Ticket de entrada para Bs As Conf 2023
                     </div>
                     <div class="card-text fs-6 fw-bold text-center mb-3">
@@ -25,7 +25,7 @@
                     </div>
                     <div>
                         <p>
-                            Este ticket otorga al Sr. ${param.campoNombre} ${param.campoApellido} el acceso a la conferencia Bs As Conf 2023 ${Integer.parseInt(param.campoCantidad) - 1 == 0 ? "sin " : "con " + Integer.toString(Integer.parseInt(param.campoCantidad) - 1)} acompañante${cantidadAcompaniantes != 1 ? "s" : ""}.
+                            Este ticket otorga al Sr. ${param.campoNombre} ${param.campoApellido} el acceso a la conferencia Bs As Conf 2023 ${mensajeAcompaniantes} acompañante${cantidadAcompaniantes != 1 ? "s" : ""}.
                         </p>
                         <p>
                             Este acceso es solo para ${param.campoCategoria}: tanto el titular como cada acompañante deberan presentar acreditación
