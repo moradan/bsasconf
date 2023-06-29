@@ -128,7 +128,7 @@
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-12 mb-2"><textarea class="form-control mb-2" id="casilla-tema" cols="30" rows="6" placeholder="Â¿Sobre quÃ© quieres hablar?"></textarea></div>
+                            <div class="col-12 mb-2"><textarea class="form-control mb-2" id="casilla-tema" cols="30" rows="6" placeholder="¿Sobre qué quieres hablar?"></textarea></div>
                         </div>
                         <div class="row text-start">
                             <label class="fs-6 mb-3 text-secondary-emphasis">Recuerda incluir un tí­tulo para tu charla.</label>

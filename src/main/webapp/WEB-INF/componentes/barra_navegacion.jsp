@@ -16,10 +16,10 @@
         </button>          
         <nav class="collapse navbar-collapse" id="links-navegacion">
             <ul class="navbar-nav">
-                <li class="nav-item"><a class="nav-link px-3" href="./index.jsp#conferencia">La conferencia</a></li>
-                <li class="nav-item"><a class="nav-link px-3" href="./index.jsp#oradores">Los oradores</a></li>
-                <li class="nav-item"><a class="nav-link px-3" href="./index.jsp#locacion">El lugar y la fecha</a></li>
-                <li class="nav-item"><a class="nav-link px-3" href="./index.jsp#anotarse">Conviértete en orador</a></li>
+                <li class="nav-item"><a class="nav-link px-3" href="./index.jsp#conferencia" data-target="#conferencia">La conferencia</a></li>
+                <li class="nav-item"><a class="nav-link px-3" href="./index.jsp#oradores" data-target="#oradores">Los oradores</a></li>
+                <li class="nav-item"><a class="nav-link px-3" href="./index.jsp#locacion" data-target="#locacion">El lugar y la fecha</a></li>
+                <li class="nav-item"><a class="nav-link px-3" href="./index.jsp#anotarse" data-target="#anotarse">Conviértete en orador</a></li>
                 <li class="nav-item"><a class="nav-link externo px-3" href="./compra.jsp">Comprar tickets</a></li>
                 <li class="nav-item"><a class="nav-link externo px-3" href="./lista_oradores.jsp">Ver Oradores</a></li>
             </ul>
