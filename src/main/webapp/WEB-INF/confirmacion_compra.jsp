@@ -27,7 +27,7 @@
     <body>
         <jsp:include page="./componentes/barra_navegacion.jsp"/>
         
-        <jsp:include page="./confirmacion_compra/cuerpo_confirmacion_compra.jsp"/>
+        <jsp:include page="./compra/cuerpo_confirmacion_compra.jsp"/>
         
         <jsp:include page="./componentes/pie_pagina.jsp"/>
         

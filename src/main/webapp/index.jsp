@@ -2,52 +2,11 @@
 <html lang="es">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <title>Codo a Codo</title>
-    <link rel="shortcut icon" href="./img/codoacodo.png" type="image/x-icon" />
-
-    <!-- Bootstrap CDN -->
-    <link
-        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
-        rel="stylesheet"
-        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
-        crossorigin="anonymous"/>
-
-    <!-- Estilo propio -->
-    <link rel="stylesheet" href="./css/estilo.css"/>
+    <jsp:include page="./WEB-INF/componentes/head.jsp"/>
 </head>
 
 <body>
-    <!-- Barra de t√≠tulo y navegaci√≥n -->
-    <header class="container-fluid sombra position-fixed top-0 bg-secondary-subtle px-1 px-lg-2 px-xl-5" data-bs-theme="dark">
-        <div class="navbar navbar-expand-lg p-0">
-            <a class="navbar-brand col-2 p-0">
-                <img class="img-fluid" src="./img/codoacodo.png" alt="logo de codo a codo">
-                <span>Bs As Conf</span>
-            </a>
-            <button class="navbar-toggler m-1 p-1" 
-                type="button" 
-                data-bs-toggle="collapse" 
-                data-bs-target="#links-navegacion" 
-                aria-controls="links-navegacion" 
-                aria-expanded="false" 
-                aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>          
-            <nav class="collapse navbar-collapse" id="links-navegacion">
-                <ul class="navbar-nav">
-                    <li class="nav-item"><a class="nav-link px-3" data-target="#conferencia">La conferencia</a></li>
-                    <li class="nav-item"><a class="nav-link px-3" data-target="#oradores">Los oradores</a></li>
-                    <li class="nav-item"><a class="nav-link px-3" data-target="#locacion">El lugar y la fecha</a></li>
-                    <li class="nav-item"><a class="nav-link px-3" data-target="#anotarse">Convi√©rtete en orador</a></li>
-                    <li class="nav-item"><a class="nav-link externo px-3 text-success" href="./compra.html">Comprar tickets</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+    <jsp:include page="./WEB-INF/componentes/barra_navegacion.jsp"/>
     
     <!-- Cuerpo principal de la p√°gina -->
     <main>
@@ -63,7 +22,7 @@
                         <p class="text-end">
                             Bs As llega por primera vez a Argentina. Un evento para compartir con nuestra comunidad el conocimiento y experiencia de los expertos que est√°n creando el futuro de internet. Ven a conocer a miembros del evento, a otros estudiantes de Codo a Codo y los oradores de primer nivel que tenemos para ti.
                         </p>
-                        <p class="text-end">¬°Te esperamos!</p>
+                        <p class="text-end">°Te esperamos!</p>
                         <div class="d-flex justify-content-end">
                             <a href="./compra.html" class="btn btn-success">Comprar tickets</a>
                             <a href="#anotarse" class="btn btn-outline-light ms-3">Quiero ser orador</a>
@@ -73,7 +32,7 @@
             </div>
         </header>
         
-        <!-- Breve rese√±a de los oradores de alto nivel -->
+        <!-- Breve reseÒ±a de los oradores de alto nivel -->
         <article id="oradores" class="container-fluid destino-nav mb-5 pt-2">
             <header class="titulo-seccion">
                 <h2 class="mb-3">oradores</h2>
@@ -138,13 +97,13 @@
             </section>
         </article>
 
-        <!-- Informaci√≥n sobre la locaci√≥n y la fecha de la conferencia -->
+        <!-- InformaciÛn sobre la locaciÛn y la fecha de la conferencia -->
         <article id="locacion" class="container-fluid destino-nav row clearfix m-0 p-0 mb-5">
             <img src="./img/honolulu.jpg" alt="foto de honolulu" class="img-fluid p-0 col-12 col-lg-6">
             <section class="bg-dark text-white p-3 col-12 col-lg-6">
                 <h2>Bs As - Octubre</h2>
-                <p>Buenos Aires es la provincia y la localidad m√°s grande del estado de Argentina, en los Estados Unidos. Honolulu es la m√°s sure√±a de entre las principales ciudades estadounidenses. Aunque el nombre de Honolulu se refiere al √°rea urbana en la costa sureste de la isla de Oahu, la ciudad y el condado de Honolulu han formado una ciudad-condado consolidada que cubre toda la ciudad (aproximadamente 600 km<sup>2</sup> de superficie).</p>
-                <a class="btn btn-outline-light">Conoc√© m√°s</a>
+                <p>Buenos Aires es la provincia y la localidad m·s grande del estado de Argentina, en los Estados Unidos. Honolulu es la m·s sureÒa de entre las principales ciudades estadounidenses. Aunque el nombre de Honolulu se refiere al ·rea urbana en la costa sureste de la isla de Oahu, la ciudad y el condado de Honolulu han formado una ciudad-condado consolidada que cubre toda la ciudad (aproximadamente 600 km<sup>2</sup> de superficie).</p>
+                <a class="btn btn-outline-light">ConocÈ m·s</a>
             </section>
         </article>
 
@@ -153,9 +112,9 @@
             <div class="mb-2">
                 <header class="titulo-seccion">
                     <h2 class="mb-3">orador</h2>
-                    <p class="volanta">convi√©rtete en un</p>
+                    <p class="volanta">conviÈrtete en un</p>
                 </header>
-                <span>An√≥tate como orador para dar una <em>charla ignite</em>. ¬°Cu√©ntanos de qu√© quieres hablar!</span>
+                <span>AnÛtate como orador para dar una <em>charla ignite</em>.°CuÈntanos de quÈ quieres hablar!</span>
             </div>
             <div class="row g-0">
                 <div class="col-12 col-md-10 col-lg-6 mx-auto">
@@ -172,7 +131,7 @@
                             <div class="col-12 mb-2"><textarea class="form-control mb-2" id="casilla-tema" cols="30" rows="6" placeholder="¬øSobre qu√© quieres hablar?"></textarea></div>
                         </div>
                         <div class="row text-start">
-                            <label class="fs-6 mb-3 text-secondary-emphasis">Recuerda incluir un t√≠tulo para tu charla.</label>
+                            <label class="fs-6 mb-3 text-secondary-emphasis">Recuerda incluir un tÌ≠tulo para tu charla.</label>
                         </div>
                         <div class="row text-center">
                             <div class="col-12">
@@ -186,21 +145,7 @@
     </main>
     
     <!-- Pie con vinculos a otros recursos -->
-    <footer id="pie" class="container-fluid py-3 bg-gradiente text-white" data-bs-theme="dark">
-        <div class="row justify-content-center">
-            <div class="col-8 col-md-10">
-                <ul class="row align-content-center g-3 m-0 p-0">
-                    <li class="col-6 col-md-2 text-center">Preguntas frecuentes</li>
-                    <li class="col-6 col-md-2 text-center">Cont√°ctanos</li>
-                    <li class="col-6 col-md-1 text-center">Prensa</li>
-                    <li class="col-6 col-md-2 text-center">Conferencias</li>
-                    <li class="col-6 col-md-2 text-center">T√©rminos y condiciones</li>
-                    <li class="col-6 col-md-1 text-center">Privacidad</li>
-                    <li class="col-6 col-md-2 text-center">Estudiantes</li>
-                </ul>
-            </div>
-        </div>
-    </footer>
+    <jsp:include page="./WEB-INF/componentes/pie_pagina.jsp"/>
 
     <!-- Scripts -->
     <script src="./js/clase-senialador.js"></script>
