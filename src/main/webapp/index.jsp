@@ -8,7 +8,7 @@
 <body>
     <jsp:include page="./WEB-INF/componentes/barra_navegacion.jsp"/>
     
-    <!-- Cuerpo principal de la pÃ¡gina -->
+    <!-- Cuerpo principal de la página -->
     <main>
         <!-- Presentacion y descripcion de la conferencia -->
         <header id="conferencia" class="container-fluid destino-nav position-relative mb-5 p-0">

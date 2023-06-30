@@ -24,6 +24,8 @@
     <!-- Barra de tí­tulo y navegación -->
     <jsp:include page="./WEB-INF/componentes/barra_navegacion.jsp"/>
 
+    <jsp:include page="./WEB-INF/oradores/cuerpo_lista_oradores.jsp"/>
     
+    <jsp:include page="./WEB-INF/componentes/pie_pagina.jsp"/>
 </body>
 </html>

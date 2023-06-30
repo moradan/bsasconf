@@ -26,6 +26,7 @@
 
     <!-- Cuerpo principal para registrar la compra de tickets-->
     <jsp:include page="./WEB-INF/compra/cuerpo_compra.jsp"/>
+    
     <!-- Pie con vinculos a otros recursos -->
     <jsp:include page="./WEB-INF/componentes/pie_pagina.jsp"/>
     
