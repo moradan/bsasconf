@@ -11,7 +11,12 @@ import java.util.ArrayList;
  * @author Moradan
  */
 public class ModeloOradores {
-    private ArrayList<Orador> listaOradores;
-    
-    
+
+    public ArrayList<Orador> getOradores() {
+        ArrayList<Orador> listaOradores = new ArrayList();
+        
+        
+        
+        return listaOradores;
+    }
 }
