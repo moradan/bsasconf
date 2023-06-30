@@ -4,6 +4,8 @@
  */
 package com.cac.bsasconf.oradores;
 
+import com.cac.bsasconf.Conexion;
+import java.sql.SQLException;
 import java.util.ArrayList;
 
 /**
@@ -12,10 +14,10 @@ import java.util.ArrayList;
  */
 public class ModeloOradores {
 
-    public ArrayList<Orador> getOradores() {
+    public ArrayList<Orador> getOradores() throws SQLException {
         ArrayList<Orador> listaOradores = new ArrayList();
         
-        
+        Conexion.getConnection();
         
         return listaOradores;
     }

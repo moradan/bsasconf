@@ -17,7 +17,7 @@ import org.apache.commons.dbcp2.BasicDataSource;
  * @author Moradan
  */
 public class Conexion {
-    private static final String URL_DB = "jdbc:mysql://root:Rod.Gim23@localhost:3306/bsasconf?useSSL=false&useTimezone=true&serverTimezone=UTC&allowPublicKeyRetrieval=true";
+    private static final String URL_DB = "jdbc:mysql://localhost:3306/bsasconf";
     private static BasicDataSource fuenteDatos;
     
     public Conexion() {
@@ -28,7 +28,7 @@ public class Conexion {
             try {
                 fuenteDatos = new BasicDataSource();
                 fuenteDatos.setUrl(URL_DB);
-                fuenteDatos.setInitialSize(50);
+                fuenteDatos.setInitialSize(10);
             } catch (Exception ex) {
                 throw new RuntimeException("La conexion tiro un error", ex);
             }
