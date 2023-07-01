@@ -5,14 +5,15 @@
 package com.cac.bsasconf;
 
 import com.cac.bsasconf.oradores.ModeloOradores;
+import com.cac.bsasconf.oradores.Orador;
 import java.io.IOException;
-import java.io.PrintWriter;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import java.sql.SQLException;
+import java.util.ArrayList;
 
 /**
  *
@@ -34,11 +35,13 @@ public class ListarOradores extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         
         ModeloOradores modelo = new ModeloOradores();
+        request.getRequestDispatcher("./WEB-INF/lista_oradores.jsp").forward(request, response);
+        
         try {
-            request.setAttribute("listaOradores", modelo.getOradores());
-            request.getRequestDispatcher("./WEB-INF/lista_oradores.jsp").forward(request, response);
+            ArrayList<Orador> listaOradores = modelo.getOradores();
+            System.out.println(listaOradores);
         } catch (SQLException ex) {
-            System.out.println("El error es " + ex.getMessage());
+            ex.printStackTrace();
         }
     }
 
