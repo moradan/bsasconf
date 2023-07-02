@@ -26,6 +26,12 @@
                         <td>
                             ${orador.fechaAlta}
                         </td>
+                        <td>
+                            <i id="orador.id" class="bi bi-pencil-fill"></i>
+                        </td>
+                        <td>
+                            <i id="orador.id" class="bi bi-trash-fill"></i>
+                        </td>
                     </tr>
                 </c:forEach>
             </tbody>
