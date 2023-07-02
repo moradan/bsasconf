@@ -1,41 +1,63 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package com.cac.bsasconf.oradores;
 
-/**
- *
- * @author Moradan
- */
-public class Orador {
-    private final int id;
-    private final String nombre;
-    private final String apellido;
-    private final String detalles;
-    private final String fechaAlta;
+import java.io.Serializable;
+import java.util.Date;
 
-    public Orador(int id, String nombre, String apellido, String detalles, String fecha_alta) {
+public class Orador implements Serializable {
+    private int id;
+    private String nombre;
+    private String apellido;
+    private String charla;
+    private String fechaAlta;
+
+    public Orador() {
+    }
+
+    public Orador(int id, String nombre, String apellido, String charla, String fechaAlta) {
         this.id = id;
         this.nombre = nombre;
         this.apellido = apellido;
-        this.detalles = detalles;
-        this.fechaAlta = fecha_alta;
-    }
-    
-    public String nombreCompleto() {
-        return this.nombre + " " + this.apellido;
+        this.charla = charla;
+        this.fechaAlta = fechaAlta;
     }
 
     public int getId() {
         return id;
     }
 
-    public String getDetalles() {
-        return detalles;
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public String getApellido() {
+        return apellido;
+    }
+
+    public void setApellido(String apellido) {
+        this.apellido = apellido;
+    }
+
+    public String getCharla() {
+        return charla;
+    }
+
+    public void setCharla(String charla) {
+        this.charla = charla;
     }
 
     public String getFechaAlta() {
         return fechaAlta;
-    }   
+    }
+
+    public void setFechaAlta(String fechaAlta) {
+        this.fechaAlta = fechaAlta;
+    }
 }
