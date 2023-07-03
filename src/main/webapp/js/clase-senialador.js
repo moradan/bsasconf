@@ -18,7 +18,7 @@ class Senialador {
     }
 
     #obtenerLinks() {
-        this.#links = document.querySelectorAll(".nav-link:not(.externo)");
+        this.#links = document.querySelectorAll(".nav-link");
     }
     
     #asignarListeners() {
@@ -35,7 +35,7 @@ class Senialador {
     #inicializarObserver() {
         const opciones = {
             threshold: [0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1]
-        }
+        };
         const observador = new IntersectionObserver(this.#alCambiarVisibilidad.bind(this), opciones);
         for (const seccion of this.#secciones) {
             observador.observe(seccion);
@@ -60,9 +60,7 @@ class Senialador {
     #determinarSeccionCentrada() {
         let seccionCentrada;
         for (const clave in this.#visibilidades) {
-            if (!seccionCentrada) {
-                seccionCentrada = clave;
-            } else if (this.#visibilidades[clave] > this.#visibilidades[seccionCentrada] ) {
+            if (!seccionCentrada || this.#visibilidades[clave] > this.#visibilidades[seccionCentrada]) {
                 seccionCentrada = clave;
             }
         }
@@ -91,7 +89,7 @@ class Senialador {
     #obtenerNavLink(seccion) {
         let i = 0;
         let len = this.#links.length;
-        while (i < len && this.#links[i].dataset.target != seccion) {i++}
+        while (i < len && this.#links[i].dataset.target !== seccion) {i++;}
         return this.#links[i];
     }
 
@@ -100,7 +98,7 @@ class Senialador {
         this.#colapsarMenu();
         
         const elementoClicado = event.currentTarget;
-        if (elementoClicado != window) {
+        if (elementoClicado !== window) {
             if (elementoClicado.classList.contains("nav-link")) {
                 const link = elementoClicado;
                 const objetivo = document.querySelector(link.dataset.target);
@@ -118,7 +116,6 @@ class Senialador {
         if (menu.classList.contains("show")) {
             boton.click();
         }
-
     }
 }
 

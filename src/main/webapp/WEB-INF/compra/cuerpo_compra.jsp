@@ -1,4 +1,4 @@
-<main class="container-fluid mt-5 pt-3 pt-md-5">
+<main id="compra" class="container-fluid destino-nav mt-5 pt-3 pt-md-5">
     <div class="row g-0 justify-content-center">
         <div class="col-12 col-md-10 col-lg-8 col-xl-7">
             <!-- Titulo y los descuentos -->

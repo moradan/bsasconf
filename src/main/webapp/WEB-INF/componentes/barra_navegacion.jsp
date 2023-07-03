@@ -20,8 +20,8 @@
                 <li class="nav-item"><a class="nav-link px-3" href="./index.jsp#oradores" data-target="#oradores">Los oradores</a></li>
                 <li class="nav-item"><a class="nav-link px-3" href="./index.jsp#locacion" data-target="#locacion">El lugar y la fecha</a></li>
                 <li class="nav-item"><a class="nav-link px-3" href="./index.jsp#anotarse" data-target="#anotarse">Conviértete en orador</a></li>
-                <li class="nav-item"><a class="nav-link externo px-3" href="./compra.jsp">Comprar tickets</a></li>
-                <li class="nav-item"><a class="nav-link externo px-3" href="./listarOradores">Ver Oradores</a></li>
+                <li class="nav-item"><a class="nav-link externo px-3" href="./compra.jsp" data-target="#compra">Comprar tickets</a></li>
+                <li class="nav-item"><a class="nav-link externo px-3" href="./listarOradores" data-target="#lista-oradores">Ver Oradores</a></li>
             </ul>
         </nav>
     </div>
