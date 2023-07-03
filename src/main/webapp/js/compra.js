@@ -19,7 +19,6 @@ const formulario = {
     inicializar: function() {
         this.formulario.addEventListener("change", this.actualizarPrecio.bind(this));
         this.botonReset.onclick = this.limpiar.bind(this);
-        window.addEventListener("pageshow", this.limpiar.bind(this));
         this.campoCategoria.onkeypress = this.evaluarTecla.bind(this);
         window.onkeydown = this.evaluarTecla.bind(this);
         this.limpiar();

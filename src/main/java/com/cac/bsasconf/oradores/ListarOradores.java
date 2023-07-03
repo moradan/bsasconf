@@ -1,4 +1,4 @@
-package com.cac.bsasconf;
+package com.cac.bsasconf.oradores;
 
 import com.cac.bsasconf.oradores.ModeloOradores;
 import java.io.IOException;

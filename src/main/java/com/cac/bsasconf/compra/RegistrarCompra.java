@@ -1,4 +1,4 @@
-package com.cac.bsasconf;
+package com.cac.bsasconf.compra;
 
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;

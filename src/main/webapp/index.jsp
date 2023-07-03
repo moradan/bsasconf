@@ -24,7 +24,7 @@
                         </p>
                         <p class="text-end">¡Te esperamos!</p>
                         <div class="d-flex justify-content-end">
-                            <a href="./compra.html" class="btn btn-success">Comprar tickets</a>
+                            <a href="./compra.jsp" class="btn btn-success">Comprar tickets</a>
                             <a href="#anotarse" class="btn btn-outline-light ms-3">Quiero ser orador</a>
                         </div>
                     </div>
@@ -120,6 +120,7 @@
                 <div class="col-12 col-md-10 col-lg-6 mx-auto">
                     <!-- formulario -->
                     <form class="container-fluid" action="agregarOrador">
+                        <input type="hidden" name="urlOrigen" value="index.jsp"/>
                         <div class="row">
                             <div class="col-12 col-md-6 mb-2">
                                 <input type="text" class="form-control" name="campoNombre" id="campo-nombre" placeholder="Nombre" required>

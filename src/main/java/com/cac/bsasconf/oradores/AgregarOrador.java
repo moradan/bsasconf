@@ -1,4 +1,4 @@
-package com.cac.bsasconf;
+package com.cac.bsasconf.oradores;
 
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
@@ -17,6 +17,9 @@ public class AgregarOrador extends HttpServlet {
         Date fecha = new Date();
         SimpleDateFormat formateador = new SimpleDateFormat("yyyy-MM-dd");
         String hoy = formateador.format(fecha).toString();
+        
+        // Comunicarse con el modelo para escribir en base de datos.
+        
         req.setAttribute("fechaAlta", hoy);
         req.getRequestDispatcher("./WEB-INF/confirmar_orador.jsp").forward(req, resp);
     }
