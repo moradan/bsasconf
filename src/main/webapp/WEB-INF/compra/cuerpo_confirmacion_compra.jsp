@@ -1,6 +1,3 @@
-<!-- allows use of java standard tags library -->
-<%@ taglib prefix = "c" uri = "http://java.sun.com/jsp/jstl/core" %>
-
 <!-- Cuerpo principal de la confirmacion de la compra donde se muestran los datos de los tiquets -->
 <main class="container-fluid mt-5 mb-5 pt-3 pt-md-5">
     <!-- centrar contenido -->
@@ -28,7 +25,7 @@
                             Este ticket otorga al Sr. ${param.campoNombre} ${param.campoApellido} el acceso a la conferencia Bs As Conf 2023 ${mensajeAcompaniantes} acompañante${cantidadAcompaniantes != 1 ? "s" : ""}.
                         </p>
                         <p>
-                            Este acceso es solo para ${param.campoCategoria}: tanto el titular como cada acompañante deberan presentar acreditación
+                            Este acceso es solo para quien sea ${param.campoCategoria}: tanto el titular como cada acompañante deberan presentar acreditación
                             en la entrada al predio.
                         </p>
                         <p>
@@ -39,14 +36,7 @@
             </section>
             
             <!-- botones -->
-            <section class="row gx-3 justify-content-between">
-                <div class="col-6">
-                    <button id="botonVolver" class="btn btn-success form-control" type="button">Volver</button>
-                </div>
-                <div class="col-6">
-                    <button id="botonDescargar" class="btn btn-success form-control" type="button">Descargar</button>
-                </div>
-            </section>
+            <jsp:include page="../componentes/botones_pagina_confirmacion.jsp"/>
         </div>
     </div>
 </main>

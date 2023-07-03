@@ -39,7 +39,7 @@
             
             <!-- Formulario de presupuesto de compra de tickets-->
             <section  class="container-fluid row justify-content-center g-0 gx-2 mb-5">
-                <form action="registrarDatos">
+                <form action="registrarCompra">
                     <!-- Nombre -->
                     <div class="row g-3 mb-3 justify-content-center">
                         <div class="col-12 col-md-6">

@@ -32,7 +32,7 @@ public class RegistrarCompra extends HttpServlet {
         String mensajeAcompaniantes = cantidadAcompaniantes == 0 ? "sin " : "con " + cantidadAcompaniantes;
         req.setAttribute("cantidadAcompaniantes", cantidadAcompaniantes);
         req.setAttribute("mensajeAcompaniantes", mensajeAcompaniantes);
-        req.getRequestDispatcher("./WEB-INF/confirmacion_compra.jsp").forward(req, resp);
+        req.getRequestDispatcher("./WEB-INF/confirmar_compra.jsp").forward(req, resp);
     }
     
     private double calcularPrecio() throws ValidationException {

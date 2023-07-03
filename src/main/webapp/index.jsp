@@ -116,22 +116,25 @@
                 </header>
                 <span>Anótate como orador para dar una <em>charla ignite</em>.¡Cuéntanos de qué quieres hablar!</span>
             </div>
-            <form class="row g-0" action="agregarOrador">
+            <div class="row g-0">
                 <div class="col-12 col-md-10 col-lg-6 mx-auto">
-                    <form class="container-fluid">
+                    <!-- formulario -->
+                    <form class="container-fluid" action="agregarOrador">
                         <div class="row">
                             <div class="col-12 col-md-6 mb-2">
-                                <input type="text" class="form-control" id="campo-nombre" placeholder="Nombre" required>
+                                <input type="text" class="form-control" name="campoNombre" id="campo-nombre" placeholder="Nombre" required>
                             </div>
                             <div class="col-12 col-md-6 mb-2">
-                                <input type="text" class="form-control col-12 col-md-6 mb-2" id="campo-apellido" placeholder="Apellido" required>
+                                <input type="text" class="form-control col-12 col-md-6 mb-2" name="campoApellido" id="campo-apellido" placeholder="Apellido" required>
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-12 mb-2"><textarea class="form-control mb-2" id="campo-charla" cols="30" rows="6" placeholder="¿Sobre qué quieres hablar?" required></textarea></div>
+                            <div class="col-12 mb-2">
+                                <textarea class="form-control mb-2" name="campoCharla" id="campo-charla" cols="30" rows="6" placeholder="¿Sobre qué quieres hablar?" required></textarea>
+                            </div>
                         </div>
                         <div class="row text-start">
-                            <label class="fs-6 mb-3 text-secondary-emphasis">Recuerda incluir un tí­tulo para tu charla.</label>
+                            <p class="fs-6 mb-3 text-secondary-emphasis">Recuerda incluir un tí­tulo para tu charla.</p>
                         </div>
                         <div class="row text-center">
                             <div class="col-12">

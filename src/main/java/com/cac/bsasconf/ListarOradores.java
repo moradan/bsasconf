@@ -9,7 +9,7 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import java.sql.SQLException;
 
-@WebServlet(name = "ListarOradores", urlPatterns = {"/listarOradores"})
+@WebServlet(name = "ListarOradores", urlPatterns = "/listarOradores")
 public class ListarOradores extends HttpServlet {
 
     @Override

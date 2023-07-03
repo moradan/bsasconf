@@ -7,7 +7,7 @@ import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
-@WebServlet(name = "editarOrador", urlPatterns = {"/editarOrador"})
+@WebServlet(name = "editarOrador", urlPatterns = "/editarOrador")
 public class EditarOrador extends HttpServlet {
 
     @Override
