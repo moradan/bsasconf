@@ -1,10 +1,9 @@
 package com.cac.bsasconf.oradores;
 
 import java.io.Serializable;
-import java.util.Date;
 
 public class Orador implements Serializable {
-    private int id;
+    private String id;
     private String nombre;
     private String apellido;
     private String charla;
@@ -13,7 +12,7 @@ public class Orador implements Serializable {
     public Orador() {
     }
 
-    public Orador(int id, String nombre, String apellido, String charla, String fechaAlta) {
+    public Orador(String id, String nombre, String apellido, String charla, String fechaAlta) {
         this.id = id;
         this.nombre = nombre;
         this.apellido = apellido;
@@ -21,11 +20,11 @@ public class Orador implements Serializable {
         this.fechaAlta = fechaAlta;
     }
 
-    public int getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(String id) {
         this.id = id;
     }
 
