@@ -60,7 +60,6 @@
                         <div class="col-12 col-md-6">
                             <label for="campoCantidad">Cantidad</label>
                             <input id="campoCantidad" type="number" min="1" value="1" class="col-12 col-md-6 form-control" name="campoCantidad" placeholder="cantidad" required>
-                            <div id="advertenciaCantidad" class="text-danger d-none">* la cantidad de entradas tiene que ser al menos 1</div>
                         </div>
                         <div class="col-12 col-md-6">
                             <label for="campoCategoria">Categoria</label>
@@ -77,9 +76,6 @@
                             Total a pagar:
                         </div>
                         <div id="campoTotal" class="col-6 text-end"></div>
-                        <div id="advertenciaDatos" class="text-danger d-none">
-                            * Antes de efectuar la compra recuerde completar los datos personales
-                        </div>
                     </div>
                     <!-- Botones-->
                     <div class="row g-3">
