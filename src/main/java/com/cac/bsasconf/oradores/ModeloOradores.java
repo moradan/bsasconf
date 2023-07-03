@@ -15,7 +15,7 @@ public class ModeloOradores {
         ResultSet rs = ps.executeQuery();
         
         while( rs.next() ) {
-            int id = rs.getInt(1);
+            String id = rs.getString(1);
             String nombre = rs.getString(2);
             String apellido = rs.getString(3);
             String charla = rs.getString(4);
