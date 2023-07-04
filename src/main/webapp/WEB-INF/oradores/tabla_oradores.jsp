@@ -13,21 +13,21 @@
     </thead>
     <tbody>
         <c:forEach items="${listaOradores}" var="orador">
-            <tr>
-                <td>
+            <tr id="${'id'.concat(orador.id)}">
+                <td class="campo-nombre">
                     ${orador.nombre}
                 </td>
-                <td>
+                <td class="campo-apellido">
                     ${orador.apellido}
                 </td>
                 <td>
                     ${orador.fechaAlta}
                 </td>
                 <td>
-                    <i id="boton-editar" class="btn btn-light bi bi-pencil-fill"></i>
+                    <i class="btn btn-light bi bi-pencil-fill" data-accion="editar" data-id="${'id'.concat(orador.id)}"></i>
                 </td>
                 <td>
-                    <i id="boton-borrar" class="btn btn-light bi bi-trash-fill"></i>
+                    <i class="btn btn-light bi bi-trash-fill" data-accion="borrar" data-id="${'id'.concat(orador.id)}"></i>
                 </td>
             </tr>
         </c:forEach>
