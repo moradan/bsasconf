@@ -11,15 +11,15 @@ class Senialador {
         this.#obtenerLinks();
         this.#asignarListeners();
         this.#inicializarObserver();
-    }
+    };
 
     #obtenerSecciones() {
         this.#secciones = document.querySelectorAll(".destino-nav");
-    }
+    };
 
     #obtenerLinks() {
         this.#links = document.querySelectorAll(".nav-link");
-    }
+    };
     
     #asignarListeners() {
         const homeLink = document.querySelector(".navbar-brand");
@@ -30,7 +30,7 @@ class Senialador {
         for (const link of this.#links) {
             link.addEventListener("click", this.#onClick.bind(this));
         }
-    }
+    };
     
     #inicializarObserver() {
         const opciones = {
@@ -40,14 +40,14 @@ class Senialador {
         for (const seccion of this.#secciones) {
             observador.observe(seccion);
         }
-    }
+    };
 
     // se llama asincronicamente gracias al Intersection Observer definido en el constructor, cuando alguna seccion cambia su visibilidad y hay que determinar si hay que cambiar el menu activo
     #alCambiarVisibilidad(objetivosCambiados) {
         this.#actualizarVisibilidades(objetivosCambiados);
         this.#determinarSeccionCentrada();
         this.#refrescarMenus();
-    }
+    };
 
     #actualizarVisibilidades(objetivosCambiados) {
         for (const objetivo of objetivosCambiados) {
@@ -55,7 +55,7 @@ class Senialador {
             const visibilidad = objetivo.intersectionRatio;
             this.#visibilidades[clave] = visibilidad;
         }
-    }
+    };
     
     #determinarSeccionCentrada() {
         let seccionCentrada;
@@ -65,33 +65,33 @@ class Senialador {
             }
         }
         this.#seccionCentrada = seccionCentrada;
-    }
+    };
     
     // refresca los menu para reflejar los cambios de cual link esta activo
     #refrescarMenus() {
         this.#atenuarMenus();
         this.#resaltarMenu();
-    }
+    };
    
     #atenuarMenus() {
         for (const link of this.#links) {
             link.classList.remove("active");
         }
-    }
+    };
     
     #resaltarMenu() {
         if (this.#seccionCentrada) {
             let link = this.#obtenerNavLink(this.#seccionCentrada);
             link.classList.add("active");
         }
-    }
+    };
     
     #obtenerNavLink(seccion) {
         let i = 0;
         let len = this.#links.length;
         while (i < len && this.#links[i].dataset.target !== seccion) {i++;}
         return this.#links[i];
-    }
+    };
 
     // estos metodos son los responsables de navegar por el documento y plegar la barra de navegacion
     #onClick(event) {
@@ -107,7 +107,7 @@ class Senialador {
                 window.scrollTo(0, 0);
             }
         }
-    }
+    };
 
     #colapsarMenu() {
         let menu = document.querySelector(".navbar-collapse");
@@ -116,7 +116,7 @@ class Senialador {
         if (menu.classList.contains("show")) {
             boton.click();
         }
-    }
-}
+    };
+};
 
 const miSenialador = new Senialador();

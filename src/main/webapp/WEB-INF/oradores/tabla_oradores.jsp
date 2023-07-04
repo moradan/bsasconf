@@ -24,10 +24,10 @@
                     ${orador.fechaAlta}
                 </td>
                 <td>
-                    <i class="btn btn-light bi bi-pencil-fill" data-accion="editar" data-id="${'id'.concat(orador.id)}"></i>
+                    <i class="btn btn-editar btn-light bi bi-pencil-fill" data-id="${'id'.concat(orador.id)}"></i>
                 </td>
                 <td>
-                    <i class="btn btn-light bi bi-trash-fill" data-accion="borrar" data-id="${'id'.concat(orador.id)}"></i>
+                    <i class="btn btn-cerrar btn-light bi bi-trash-fill" data-id="${'id'.concat(orador.id)}"></i>
                 </td>
             </tr>
         </c:forEach>
