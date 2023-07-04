@@ -9,11 +9,11 @@ class SeleccionadorOrador {
     
     constructor() {
         this.#obtenerBotonesEditar();
-        this.#obtenerBotonerBorrar();
+        this.#obtenerBotonesBorrar();
         this.#asignarListeners();
     }
     
-    #obtenerBotonerEditar() {
+    #obtenerBotonesEditar() {
         
     };
     
@@ -26,4 +26,4 @@ class SeleccionadorOrador {
     };
 };
 
-const miSeleccionador = new SeleccionadorOradores();
+const miSeleccionador = new SeleccionadorOrador();
