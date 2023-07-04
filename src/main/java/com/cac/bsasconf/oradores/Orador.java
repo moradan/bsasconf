@@ -3,7 +3,7 @@ package com.cac.bsasconf.oradores;
 import java.io.Serializable;
 
 public class Orador implements Serializable {
-    private String id;
+    private int id;
     private String nombre;
     private String apellido;
     private String charla;
@@ -12,7 +12,7 @@ public class Orador implements Serializable {
     public Orador() {
     }
 
-    public Orador(String id, String nombre, String apellido, String charla, String fechaAlta) {
+    public Orador(int id, String nombre, String apellido, String charla, String fechaAlta) {
         this.id = id;
         this.nombre = nombre;
         this.apellido = apellido;
@@ -20,11 +20,11 @@ public class Orador implements Serializable {
         this.fechaAlta = fechaAlta;
     }
 
-    public String getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(int id) {
         this.id = id;
     }
 
