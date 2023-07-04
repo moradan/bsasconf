@@ -99,11 +99,12 @@ class Senialador {
         
         const elementoClicado = event.currentTarget;
         if (elementoClicado !== window) {
-            if (elementoClicado.classList.contains("nav-link")) {
+            clases = elementoClicado.classList;
+            if (clases.contains("nav-link") && !clases.contains("externo")) {
                 const link = elementoClicado;
                 const objetivo = document.querySelector(link.dataset.target);
                 objetivo.scrollIntoView();    
-            } else if (elementoClicado.classList.contains("navbar-brand")) {
+            } else if (clases.contains("navbar-brand")) {
                 window.scrollTo(0, 0);
             }
         }

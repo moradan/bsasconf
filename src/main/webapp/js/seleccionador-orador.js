@@ -1,6 +1,5 @@
 class SeleccionadorOrador {
-    #botonesEditar = [];
-    #botonesBorrar = [];
+    #botones = [];   
     #columnaNombre;
     #columnaApellido;
     #campoNombre;
@@ -8,20 +7,34 @@ class SeleccionadorOrador {
     #banderaEditar;
     
     constructor() {
-        this.#obtenerBotonesEditar();
-        this.#obtenerBotonesBorrar();
+        this.#obtenerBotones();
+        this.#obtenerCampos();
         this.#asignarListeners();
     }
     
-    #obtenerBotonesEditar() {
-        
-    };
-    
-    #obtenerBotonesBorrar() {
-   
+    #obtenerBotones() {
+        this.#botones = document.querySelectorAll(".btn");
     };
     
     #asignarListeners() {
+        for (const boton of this.#botones) {
+            boton.addEventListener("click", this.#onClick.bind(this));
+        }
+    };
+    
+    #onClick(event) {
+        
+    };
+    
+    #obtenerCampos() {
+        
+    };
+    
+    #obtenerCeldas() {
+        
+    };
+    
+    #copiarDatos() {
         
     };
 };
