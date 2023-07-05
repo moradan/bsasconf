@@ -36,5 +36,5 @@
 <form id="formulario-datos" action="editarOrador">
     <input id="campo-nombre" name="campoNombre" value="" type="hidden"/>
     <input id="campo-apellido" name="campoApellido" value="" type="hidden"/>
-    <input id="campo-bandera" name="campoBanderaEditar" value="true" type="hidden"/>
+    <input id="campo-bandera" name="campoBanderaEditar" value="" type="hidden"/>
 </form>
