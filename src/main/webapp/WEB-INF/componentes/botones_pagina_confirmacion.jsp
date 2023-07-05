@@ -4,7 +4,7 @@
             <button onclick="history.back();" class="btn btn-success form-control" type="button">Volver</button>
         </div>
         <div class="col-6">
-            <button id="botonDescargar" class="btn btn-success form-control" type="button">Descargar</button>
+            <button onclick="descargarPDF();" class="btn btn-success form-control" type="button">Descargar</button>
         </div>
     </form>
 </section>
