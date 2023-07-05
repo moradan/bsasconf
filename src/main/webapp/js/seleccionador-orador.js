@@ -1,10 +1,10 @@
 class SeleccionadorOrador {
     #botones = [];   
-    #columnaNombre;
-    #columnaApellido;
+    #celdaNombre;
+    #celdaApellido;
     #campoNombre;
     #campoApellido;
-    #banderaEditar;
+    #campoBandera;
     
     constructor() {
         this.#obtenerBotones();
@@ -23,19 +23,28 @@ class SeleccionadorOrador {
     };
     
     #onClick(event) {
-        
+        const elementoClicado = event.currentTarget;
+        this.#campoBandera.value = elementoClicado.dataset.accion;
+        const id = elementoClicado.dataset.id;
+        this.#obtenerCeldas(`#${id}`);
+        this.#copiarDatos();
+        document.querySelector("#formulario-datos").submit();
     };
     
     #obtenerCampos() {
-        
+        this.#campoNombre = document.querySelector("#campo-nombre");
+        this.#campoApellido = document.querySelector("#campo-apellido");
+        this.#campoBandera = document.querySelector("#campo-bandera");
     };
     
-    #obtenerCeldas() {
-        
+    #obtenerCeldas(id) {
+        this.#celdaNombre = document.querySelector(`${id}` + " .celda-nombre");
+        this.#celdaApellido = document.querySelector(`${id}` + " .celda-apellido");
     };
     
     #copiarDatos() {
-        
+        this.#campoNombre.value = this.#celdaNombre.innerHTML;
+        this.#campoApellido.value = this.#celdaApellido.innerHTML;
     };
 };
 
