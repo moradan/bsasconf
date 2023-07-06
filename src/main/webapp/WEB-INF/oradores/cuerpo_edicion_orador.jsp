@@ -1,4 +1,4 @@
-<article id="anotarse" class="container-fluid destino-nav text-center mt-5 mb-5">
+<article id="anotarse" class="container-fluid destino-nav text-center mt-5 mb-5 pt-5">
     <div class="mb-2">
         <header class="titulo-seccion">
             <h2 class="mb-3">orador</h2>

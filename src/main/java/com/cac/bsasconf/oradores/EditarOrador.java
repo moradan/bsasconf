@@ -11,8 +11,8 @@ import jakarta.servlet.http.HttpServletResponse;
 public class EditarOrador extends HttpServlet {
 
     @Override
-    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        
+    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        req.getRequestDispatcher("./WEB-INF/edicion_orador.jsp").forward(req, resp);
     }
     
 }
