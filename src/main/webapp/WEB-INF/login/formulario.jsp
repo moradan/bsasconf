@@ -1,10 +1,10 @@
-<form class="container-fluid">
+<form class="container-fluid px-0">
     <section class="row g-0 mb-3">
         <div class="col-lg-5">
-            <label for="campo-usuario">Usuario</label>
-            <input class="form-control" type="text" id="campo-usuario" name="campoUsuario" autofocus/>
-            <label for="campo-password">Password</label>
-            <input class="form-control" type="password" id="campo-password" name="campoPassword"/>
+            <label class="mb-1" for="campo-usuario">Usuario</label>
+            <input class="form-control mb-3" type="text" id="campo-usuario" name="campoUsuario" autofocus/>
+            <label class="mb-1" for="campo-password">Password</label>
+            <input class="form-control mb-3" type="password" id="campo-password" name="campoPassword"/>
         </div>
     </section>
     <section class="row gx-3 mb-3">
