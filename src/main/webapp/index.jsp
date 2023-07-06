@@ -20,7 +20,7 @@
                     <div class="col-11 col-md-6 col-lg-4 my-3 me-3 me-md-5">
                         <h2 class="text-end">Conf Bs As</h2>
                         <p class="text-end">
-                            Bs As llega por primera vez a Argentina. Un evento para compartir con nuestra comunidad el conocimiento y experiencia de los expertos que est√°n creando el futuro de internet. Ven a conocer a miembros del evento, a otros estudiantes de Codo a Codo y los oradores de primer nivel que tenemos para ti.
+                            Bs As llega por primera vez a Argentina. Un evento para compartir con nuestra comunidad el conocimiento y experiencia de los expertos que est·n creando el futuro de internet. Ven a conocer a miembros del evento, a otros estudiantes de Codo a Codo y los oradores de primer nivel que tenemos para ti.
                         </p>
                         <p class="text-end">°Te esperamos!</p>
                         <div class="d-flex justify-content-end">
