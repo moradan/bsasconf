@@ -1,4 +1,4 @@
-package com.cac.bsasconf.oradores;
+package com.cac.bsasconf.modelo;
 
 import java.sql.Connection;
 import java.sql.SQLException;
@@ -6,11 +6,11 @@ import javax.sql.DataSource;
 import org.apache.commons.dbcp2.BasicDataSource;
 
 
-public class ConexionOradores {
+public class Conexion {
     private static final String URL_DB = "jdbc:mysql://root:root@localhost:3306/bsasconf?useSSL=false&useTimezone=true&serverTimezone=UTC&allowPublicKeyRetrieval=true";
     private static BasicDataSource dataSource;
 
-    private ConexionOradores() {
+    private Conexion() {
     }
 
     private static DataSource getDataSource() {

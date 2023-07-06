@@ -1,4 +1,4 @@
-package com.cac.bsasconf.oradores;
+package com.cac.bsasconf.modelo;
 
 import java.io.Serializable;
 

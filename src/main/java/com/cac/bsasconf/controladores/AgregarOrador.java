@@ -1,4 +1,4 @@
-package com.cac.bsasconf.oradores;
+package com.cac.bsasconf.controladores;
 
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;

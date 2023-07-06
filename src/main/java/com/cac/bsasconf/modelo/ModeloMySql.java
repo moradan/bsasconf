@@ -1,4 +1,4 @@
-package com.cac.bsasconf.oradores;
+package com.cac.bsasconf.modelo;
 
 import com.cac.bsasconf.Modelo;
 import java.sql.Connection;
@@ -13,7 +13,7 @@ public class ModeloMySql implements Modelo {
     public ArrayList<Orador> getOradores() {
         try {
             ArrayList<Orador> listaOradores = new ArrayList<>();
-            Connection coneccion = ConexionOradores.getConnection();
+            Connection coneccion = Conexion.getConnection();
             PreparedStatement ps = coneccion.prepareStatement("SELECT * FROM `oradores`");
             ResultSet rs = ps.executeQuery();
 

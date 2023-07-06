@@ -1,6 +1,6 @@
 package com.cac.bsasconf;
 
-import com.cac.bsasconf.oradores.Orador;
+import com.cac.bsasconf.modelo.Orador;
 import java.util.List;
 
 public interface Modelo {
