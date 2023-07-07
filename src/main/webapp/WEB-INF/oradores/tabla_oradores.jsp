@@ -13,11 +13,11 @@
     </thead>
     <tbody>
         <c:forEach items="${listaOradores}" var="orador">
-            <tr id="${'id'.concat(orador.id)}">
-                <td class="celda-nombre">
+            <tr>
+                <td>
                     ${orador.nombre}
                 </td>
-                <td class="celda-apellido">
+                <td>
                     ${orador.apellido}
                 </td>
                 <td>
@@ -33,8 +33,7 @@
         </c:forEach>
     </tbody>
 </table>
-<form id="formulario-datos" action="autenticar">
-    <input id="campo-nombre" name="campoNombre" value="" type="hidden"/>
-    <input id="campo-apellido" name="campoApellido" value="" type="hidden"/>
-    <input id="campo-bandera" name="campoBanderaEditar" value="" type="hidden"/>
+<form id="formulario-datos" action="editarOrador">
+    <input id="campo-id" name="campoId" value="" type="hidden"/>
+    <input id="campo-bandera" name="campoBandera" value="" type="hidden"/>
 </form>

@@ -1,14 +1,10 @@
 class SeleccionadorOrador {
-    #botones = [];   
-    #celdaNombre;
-    #celdaApellido;
-    #campoNombre;
-    #campoApellido;
-    #campoBandera;
+    #botones = [];
+    #campoId = document.querySelector("#campo-id");
+    #campoBandera = document.querySelector("#campo-bandera")
     
     constructor() {
         this.#obtenerBotones();
-        this.#obtenerCampos();
         this.#asignarListeners();
     }
     
@@ -24,27 +20,14 @@ class SeleccionadorOrador {
     
     #onClick(event) {
         const elementoClicado = event.currentTarget;
-        this.#campoBandera.value = elementoClicado.dataset.accion;
+        
         const id = elementoClicado.dataset.id;
-        this.#obtenerCeldas(`#${id}`);
-        this.#copiarDatos();
+        const accion = elementoClicado.dataset.accion;
+        
+        this.#campoId.value = id.substring(2);
+        this.#campoBandera.value = accion;
+        
         document.querySelector("#formulario-datos").submit();
-    };
-    
-    #obtenerCampos() {
-        this.#campoNombre = document.querySelector("#campo-nombre");
-        this.#campoApellido = document.querySelector("#campo-apellido");
-        this.#campoBandera = document.querySelector("#campo-bandera");
-    };
-    
-    #obtenerCeldas(id) {
-        this.#celdaNombre = document.querySelector(`${id}` + " .celda-nombre");
-        this.#celdaApellido = document.querySelector(`${id}` + " .celda-apellido");
-    };
-    
-    #copiarDatos() {
-        this.#campoNombre.value = this.#celdaNombre.innerHTML;
-        this.#campoApellido.value = this.#celdaApellido.innerHTML;
     };
 };
 
