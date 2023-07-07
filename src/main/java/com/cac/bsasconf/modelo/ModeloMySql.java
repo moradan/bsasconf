@@ -64,11 +64,11 @@ public class ModeloMySql implements Modelo {
     public int addOrador(Orador orador) {
         try {
             // establezco conexion con la base de datos
-            Connection coneccion = Conexion.getConnection();
+            Connection conexion = Conexion.getConnection();
             
             // preparo la sql query
             String sql = "INSERT INTO `oradores` VALUES(null, ?, ?, ?, ?)";
-            PreparedStatement ps = coneccion.prepareStatement(sql);
+            PreparedStatement ps = conexion.prepareStatement(sql);
             ps.setString(1, orador.getNombre());
             ps.setString(2, orador.getApellido());
             ps.setString(3, orador.getCharla());
@@ -87,7 +87,14 @@ public class ModeloMySql implements Modelo {
 
     @Override
     public int removeOrador(int id) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        try {
+            Connection conexion = Conexion.getConnection();
+            String sql = "DELETE FROM `oradores` WHERE `id` = ?";
+            PreparedStatement ps = conexion.prepareStatement(sql);
+            ps.setInt(1, id);
+            return ps.executeUpdate();
+        } catch (SQLException ex) {
+            throw new RuntimeException("Error en removeOrador() en ModeloMySql");
+        }
     }
-    
 }

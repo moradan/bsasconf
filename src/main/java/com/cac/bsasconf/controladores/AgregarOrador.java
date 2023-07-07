@@ -28,8 +28,8 @@ public class AgregarOrador extends HttpServlet {
         
         // Comunicarse con el modelo para escribir en base de datos.
         ModeloMySql modelo = new ModeloMySql();
-        
         modelo.addOrador(oradorParaAgregar);
+        
         req.setAttribute("fechaAlta", hoy);
         req.getRequestDispatcher("./WEB-INF/confirmar_orador.jsp").forward(req, resp);
     }

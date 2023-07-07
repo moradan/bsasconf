@@ -4,6 +4,7 @@
  */
 package com.cac.bsasconf.controladores;
 
+import com.cac.bsasconf.modelo.ModeloMySql;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
@@ -20,7 +21,10 @@ public class ServletBorrarOrador extends HttpServlet{
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        
+        // Comunicarse con el modelo para escribir en base de datos.
+        ModeloMySql modelo = new ModeloMySql();
+
+        modelo.removeOrador(Integer.parseInt(req.getParameter("campoId")));
+        req.getRequestDispatcher("/listarOradores").forward(req, resp);
     }
-    
 }

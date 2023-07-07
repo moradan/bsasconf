@@ -20,7 +20,7 @@
                 </div>
             </div>
             <form class="row g-3 mb-3" action="borrar">
-                <input type="hidden" value="${oradorParaBorrar.id}">
+                <input type="hidden" name="campoId" value="${oradorParaBorrar.id}">
                 <div class="col-6">
                     <button class="btn btn-danger form-control" onclick="history.back()" type="button">Conservar Orador</button>
                 </div>

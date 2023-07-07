@@ -20,8 +20,6 @@ public class ServletEditarBorrar extends HttpServlet {
         
         Orador oradorParaBorrar = modelo.getOrador(Integer.parseInt(id));
         
-        System.out.println(oradorParaBorrar);
-        
         req.setAttribute("oradorParaBorrar", oradorParaBorrar);
         req.getRequestDispatcher("./WEB-INF/" + bandera + "_orador.jsp").forward(req, resp);
     }
