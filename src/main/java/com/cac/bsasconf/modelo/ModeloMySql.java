@@ -15,8 +15,8 @@ public class ModeloMySql implements Modelo {
     public ArrayList<Orador> getOradores() {
         try {
             ArrayList<Orador> listaOradores = new ArrayList<>();
-            Connection coneccion = Conexion.getConnection();
-            PreparedStatement ps = coneccion.prepareStatement("SELECT * FROM `oradores`");
+            Connection conexion = Conexion.getConnection();
+            PreparedStatement ps = conexion.prepareStatement("SELECT * FROM `oradores`");
             ResultSet rs = ps.executeQuery();
 
             while( rs.next() ) {
@@ -37,7 +37,27 @@ public class ModeloMySql implements Modelo {
 
     @Override
     public Orador getOrador(int id) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        Orador oradorParaDevolver = null;
+        try {
+            Connection conexion = Conexion.getConnection();
+            String sql = "SELECT * FROM `oradores` WHERE `id` = ?";
+            PreparedStatement ps = conexion.prepareStatement(sql);
+            ps.setInt(1, id);
+            ResultSet rs = ps.executeQuery();
+            
+            if(rs.next()) {
+                String nombre = rs.getString(2);
+                String apellido = rs.getString(3);
+                String charla = rs.getString(4);
+                String fechaAlta = rs.getString(5);
+                
+                oradorParaDevolver = new Orador(id, nombre, apellido, charla, fechaAlta);
+            } 
+            
+            return oradorParaDevolver;
+        } catch (SQLException ex) {
+            throw new RuntimeException("Error sql en getorador", ex);
+        }
     }
 
     @Override

@@ -33,7 +33,7 @@
         </c:forEach>
     </tbody>
 </table>
-<form id="formulario-datos" action="editarOrador">
+<form id="formulario-datos" action="editarBorrar">
     <input id="campo-id" name="campoId" value="" type="hidden"/>
     <input id="campo-bandera" name="campoBandera" value="" type="hidden"/>
 </form>

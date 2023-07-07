@@ -18,7 +18,7 @@ public class Conexion {
             try {
                 dataSource = new BasicDataSource();
                 dataSource.setUrl(URL_DB);
-                dataSource.setInitialSize(10);
+                dataSource.setInitialSize(50);
             } catch (Exception ex) {
                 throw new RuntimeException("Error de E/S al leer config de BBDD", ex);
             }
