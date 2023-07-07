@@ -59,4 +59,10 @@ public class Orador implements Serializable {
     public void setFechaAlta(String fechaAlta) {
         this.fechaAlta = fechaAlta;
     }
+
+    @Override
+    public String toString() {
+        return "Orador{" + "id=" + id + ", nombre=" + nombre + ", apellido=" + apellido + ", charla=" + charla + ", fechaAlta=" + fechaAlta + '}';
+    }
+    
 }

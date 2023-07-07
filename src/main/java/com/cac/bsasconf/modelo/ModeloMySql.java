@@ -6,6 +6,8 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 public class ModeloMySql implements Modelo {
      
@@ -39,8 +41,23 @@ public class ModeloMySql implements Modelo {
     }
 
     @Override
-    public int addOrador(Orador Orador) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    public int addOrador(Orador orador) {
+        try {
+            // establezco conexion con la base de datos
+            Connection coneccion = Conexion.getConnection();
+            
+            // preparo la sql query
+            String sql = "INSERT INTO `oradores` VALUES(null, ?, ?, ?, ?)";
+            PreparedStatement ps = coneccion.prepareStatement(sql);
+            ps.setString(1, orador.getNombre());
+            ps.setString(2, orador.getApellido());
+            ps.setString(3, orador.getCharla());
+            ps.setString(4, orador.getFechaAlta());
+            return ps.executeUpdate();
+            
+        } catch (SQLException ex) {
+            throw new RuntimeException("Error de conexion SQL", ex);
+        }
     }
 
     @Override
