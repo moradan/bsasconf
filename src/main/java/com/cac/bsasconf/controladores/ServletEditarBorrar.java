@@ -18,9 +18,9 @@ public class ServletEditarBorrar extends HttpServlet {
         ModeloMySql modelo = new ModeloMySql();
         String id = req.getParameter("campoId");
         
-        Orador oradorParaBorrar = modelo.getOrador(Integer.parseInt(id));
+        Orador oradorObjetivo = modelo.getOrador(Integer.parseInt(id));
         
-        req.setAttribute("oradorParaBorrar", oradorParaBorrar);
+        req.setAttribute("oradorObjetivo", oradorObjetivo);
         req.getRequestDispatcher("./WEB-INF/" + bandera + "_orador.jsp").forward(req, resp);
     }
 }

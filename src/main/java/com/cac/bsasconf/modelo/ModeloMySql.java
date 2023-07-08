@@ -82,7 +82,7 @@ public class ModeloMySql implements Modelo {
 
     @Override
     public int updateOrador(Orador Orador) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        return addOrador(Orador);
     }
 
     @Override

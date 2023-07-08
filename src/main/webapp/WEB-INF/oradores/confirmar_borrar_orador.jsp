@@ -8,19 +8,19 @@
                             ¿Desea borrar este orador?
                         </h1>
                         <p class="card-text fw-bold">
-                            ${oradorParaBorrar.nombre} ${oradorParaBorrar.apellido}
+                            ${oradorObjetivo.nombre} ${oradorObjetivo.apellido}
                         </p>
                         <p class="card-text">
-                            Con su charla: ${oradorParaBorrar.charla}
+                            Con su charla: ${oradorObjetivo.charla}
                         </p>
                         <p class="card-text">
-                            Fecha de alta: ${oradorParaBorrar.fechaAlta}
+                            Fecha de alta: ${oradorObjetivo.fechaAlta}
                         </p>
                     </div>
                 </div>
             </div>
             <form class="row g-3 mb-3" action="borrar">
-                <input type="hidden" name="campoId" value="${oradorParaBorrar.id}">
+                <input type="hidden" name="campoId" value="${oradorObjetivo.id}">
                 <div class="col-6">
                     <button class="btn btn-danger form-control" onclick="history.back()" type="button">Conservar Orador</button>
                 </div>

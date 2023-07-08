@@ -10,7 +10,7 @@
     <jsp:include page="./componentes/barra_navegacion.jsp"/>
     
     <!-- cuerpo de la confirmacion de orador agregado -->
-    <jsp:include page="./oradores/cuerpo_confirmacion_orador.jsp"/>
+    <jsp:include page="./oradores/cuerpo_confirmacion_agregar_orador.jsp"/>
     
     <!-- Pie con vinculos a otros recursos -->
     <jsp:include page="./componentes/pie_pagina.jsp"/>

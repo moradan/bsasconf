@@ -9,7 +9,7 @@
     <!-- Barra de tí­tulo y navegación -->
     <jsp:include page="./componentes/barra_navegacion.jsp"/>
 
-    <jsp:include page=""/>
+    <jsp:include page="oradores/cuerpo_edicion_orador.jsp"/>
     
     <jsp:include page="./componentes/pie_pagina.jsp"/>
     

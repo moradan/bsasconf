@@ -11,8 +11,8 @@ import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-@WebServlet(name="agregarOrador", urlPatterns = "/agregarOrador")
-public class AgregarOrador extends HttpServlet {
+@WebServlet(name="agregarActualizar", urlPatterns = "/agregarActualizar")
+public class ServletAgregarActualizar extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
@@ -23,14 +23,20 @@ public class AgregarOrador extends HttpServlet {
         String nombre = req.getParameter("campoNombre");
         String apellido = req.getParameter("campoApellido");
         String charla = req.getParameter("campoCharla");
-        Orador oradorParaAgregar = new Orador(0, nombre, apellido, charla, hoy);
-        System.out.println(oradorParaAgregar);
+        int id;
+        try {
+            id = Integer.parseInt(req.getParameter("campoId"));
+        } catch(NumberFormatException e) {
+            id = 0;
+        }
+        Orador oradorParaActualizar = new Orador(id, nombre, apellido, charla, hoy);
         
         // Comunicarse con el modelo para escribir en base de datos.
+        // el metodo updateOrador va a comprobar si el orador existe, hace update en caso positivo, y agregarlo en caso negativo.
         ModeloMySql modelo = new ModeloMySql();
-        modelo.addOrador(oradorParaAgregar);
+        modelo.updateOrador(oradorParaActualizar);
         
         req.setAttribute("fechaAlta", hoy);
-        req.getRequestDispatcher("./WEB-INF/confirmar_orador.jsp").forward(req, resp);
+        req.getRequestDispatcher("./WEB-INF/confirmar_agregar_orador.jsp").forward(req, resp);
     }
 }
