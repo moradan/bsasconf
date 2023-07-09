@@ -20,12 +20,13 @@
                             Fecha de alta: ${fechaAlta}
                         </p>
                     </div>
-                    
                 </div>
             </section>
             
             <!-- botones -->
-            <jsp:include page="../componentes/botones_pagina_confirmacion.jsp"/>
+            <div class="col-12 col-md-6">
+                <a class="btn btn-success" href="./index.jsp#anotarse">Ok</a>
+            </div>
         </div>
     </div>
 </main>

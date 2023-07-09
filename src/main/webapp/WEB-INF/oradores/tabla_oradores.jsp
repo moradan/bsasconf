@@ -33,7 +33,10 @@
         </c:forEach>
     </tbody>
 </table>
+   
+
 <form id="formulario-datos" action="editarBorrar">
+    <input type="hidden" name="inicio" value="${param.inicio}}"/>
     <input id="campo-id" name="campoId" value="" type="hidden"/>
     <input id="campo-bandera" name="campoBandera" value="" type="hidden"/>
 </form>

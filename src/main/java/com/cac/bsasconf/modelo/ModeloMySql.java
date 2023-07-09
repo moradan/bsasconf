@@ -73,6 +73,8 @@ public class ModeloMySql implements Modelo {
             ps.setString(2, orador.getApellido());
             ps.setString(3, orador.getCharla());
             ps.setString(4, orador.getFechaAlta());
+            
+            // ejecuto la insercion del registro y termina el metodo
             return ps.executeUpdate();
             
         } catch (SQLException ex) {
@@ -81,8 +83,30 @@ public class ModeloMySql implements Modelo {
     }
 
     @Override
-    public int updateOrador(Orador Orador) {
-        return addOrador(Orador);
+    public int updateOrador(Orador orador) {
+        
+        if (orador.getId() == 0){
+            return addOrador(orador);
+        } else {
+            try {
+                // Establezco conexion con la base de datos
+                Connection conexion = Conexion.getConnection();
+                
+                // Preparo la sentencia sql
+                String sql = "UPDATE `oradores` SET `nombre` = ?, `apellido` = ?, `charla` = ? WHERE `id` = ?";
+                PreparedStatement ps = conexion.prepareStatement(sql);
+                ps.setString(1, orador.getNombre());
+                ps.setString(2, orador.getApellido());
+                ps.setString(3, orador.getCharla());
+                ps.setInt(4, orador.getId());
+                
+                // Ejecuto el update y termino el metodo
+                return ps.executeUpdate();
+                
+            } catch (SQLException ex) {
+                throw new RuntimeException("No se pudo establecer la conexion con MySQL");
+            }
+        }
     }
 
     @Override

@@ -120,8 +120,12 @@
                 <div class="col-12 col-md-10 col-lg-6 mx-auto">
                     <!-- formulario -->
                     <jsp:include page="WEB-INF/componentes/forumulario_orador.jsp"/>
+                    <div class="row text-start">
+                        <p class="fs-6 mb-3 text-secondary-emphasis">Recuerda incluir un tí­tulo para tu charla.</p>
+                    </div>
+                    <jsp:include page="./WEB-INF/componentes/botones_agregar_orador.jsp"/>
                 </div>
-            </form>
+            </div>
         </article>
     </main>
     
