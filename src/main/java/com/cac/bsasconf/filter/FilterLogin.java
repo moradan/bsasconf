@@ -12,12 +12,12 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpSession;
 import java.io.IOException;
 
-@WebFilter(filterName="filtroLogin", urlPatterns={"/listarOradores"})
+@WebFilter(filterName="filtroLogin", urlPatterns={"/listarOradores", "/editarBorrar"})
 public class FilterLogin implements Filter {
 
     @Override
     public void init(FilterConfig filterConfig) throws ServletException {
-        Filter.super.init(filterConfig); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/OverriddenMethodBody
+        Filter.super.init(filterConfig);
     }
 
     @Override

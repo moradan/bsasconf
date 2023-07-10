@@ -14,8 +14,8 @@ public class ServletLogin extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        String origen = req.getParameter("origen"); // Obtengo el origen
-        req.setAttribute("origen", origen); // Lo seteo como valor para poner en el form del .jsp (ir a verlo)
+        String origen = req.getParameter("origen");
+        req.setAttribute("origen", origen);
         req.getRequestDispatcher("/WEB-INF/login.jsp").forward(req, resp);
     }
 
@@ -26,7 +26,7 @@ public class ServletLogin extends HttpServlet {
         UsuarioDTO usuario = new UsuarioDTO(nombreUsuario, password);
         
         if(usuario.autenticar()){
-            String destino = req.getParameter("destino");
+            String destino = req.getParameter("origen");
             HttpSession session = req.getSession(); 
             session.setMaxInactiveInterval(60);
             session.setAttribute("usuarioLogueado", usuario);

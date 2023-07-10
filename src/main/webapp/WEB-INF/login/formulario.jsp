@@ -1,7 +1,7 @@
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 
 <form action="${pageContext.request.contextPath}/login" method="post" class="container-fluid px-0">
-    <input type="hidden" name="destino" value="${origen}"/>
+    <input type="hidden" name="origen" value="${origen}"/>
     <section class="row g-0 mb-3">
         <div class="col-lg-5">
             <label class="mb-1" for="campo-usuario">Usuario</label>
