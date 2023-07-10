@@ -6,9 +6,10 @@ import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.HttpSession;
 import java.io.IOException;
 
-@WebServlet(name="ServletLogin", urlPatterns="/login")
+@WebServlet(name="ServletLogin", urlPatterns={"/login"})
 public class ServletLogin extends HttpServlet {
 
     @Override
@@ -25,8 +26,14 @@ public class ServletLogin extends HttpServlet {
         UsuarioDTO usuario = new UsuarioDTO(nombreUsuario, password);
         
         if(usuario.autenticar()){
-            System.out.println("Login correcto");
+            String destino = req.getParameter("destino");
+            HttpSession session = req.getSession(); 
+            session.setMaxInactiveInterval(60);
+            session.setAttribute("usuarioLogueado", usuario);
+
+            resp.sendRedirect(req.getContextPath() + destino);
         } else {
+            req.setAttribute("huboError", true);
             doGet(req, resp);
         }
     }
