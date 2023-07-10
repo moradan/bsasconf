@@ -36,6 +36,9 @@ public class ServletAgregarActualizar extends HttpServlet {
         ModeloMySql modelo = new ModeloMySql();
         modelo.updateOrador(oradorParaActualizar);
         
+        // el id se pasa para que la pagina de confirmacion decida si el boton ok regresa a index o a lista de oradores.
+        // la fecha de hoy no forma parte del formulario, se crea aqui en el servlete de modo que hay que pasarla manualmente
+        req.setAttribute("id", id);
         req.setAttribute("fechaAlta", hoy);
         req.getRequestDispatcher("./WEB-INF/confirmar_agregar_orador.jsp").forward(req, resp);
     }

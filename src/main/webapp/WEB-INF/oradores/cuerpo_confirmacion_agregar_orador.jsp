@@ -1,3 +1,6 @@
+<!-- import para hacer uso de jakarta standard tag library -->
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+
 <!-- Cuerpo principal de la confirmacion de la compra donde se muestran los datos de los tiquets -->
 <main class="container-fluid mt-5 mb-5 pt-3 pt-md-5">
     <!-- centrar contenido -->
@@ -25,7 +28,14 @@
             
             <!-- botones -->
             <div class="col-12 col-md-6">
-                <a class="btn btn-success" href="./index.jsp#anotarse">Ok</a>
+                <c:choose>
+                    <c:when test="${id==0}">
+                        <a class="btn btn-success form-control" href="./index.jsp#anotarse">Ok</a>
+                    </c:when>
+                    <c:otherwise>
+                        <a class="btn btn-success form-control" href="./listarOradores">Ok</a>
+                    </c:otherwise>
+                </c:choose>    
             </div>
         </div>
     </div>

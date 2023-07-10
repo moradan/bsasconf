@@ -1,4 +1,5 @@
-<form action="editarOrador" class="container-fluid px-0">
+<form action="${pageContext.request.contextPath}/login" method="post" class="container-fluid px-0">
+    <input type="hidden" name="destino" value="${origen}"/>
     <section class="row g-0 mb-3">
         <div class="col-lg-5">
             <label class="mb-1" for="campo-usuario">Usuario</label>

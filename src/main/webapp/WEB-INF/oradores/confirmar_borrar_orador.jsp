@@ -2,7 +2,7 @@
     <section class="row g-0 mb-5 justify-content-center">
         <div class="col-10 col-md-6 col-lg-4">
             <div class="row g-3 mb-3">
-                <div class="card">
+                <div class="card shadow">
                     <div class="card-body">
                         <h1 class="card-title fs-5 fw-bold mb-3">
                             ¿Desea borrar este orador?
