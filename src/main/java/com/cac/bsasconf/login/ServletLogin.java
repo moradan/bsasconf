@@ -1,5 +1,6 @@
 package com.cac.bsasconf.login;
 
+import com.cac.bsasconf.modelo.UsuarioDTO;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
@@ -19,6 +20,14 @@ public class ServletLogin extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        String nombreUsuario = req.getParameter("campoUsuario");
+        String password = req.getParameter("campoPassword");
+        UsuarioDTO usuario = new UsuarioDTO(nombreUsuario, password);
         
+        if(usuario.autenticar()){
+            System.out.println("Login correcto");
+        } else {
+            doGet(req, resp);
+        }
     }
 }
