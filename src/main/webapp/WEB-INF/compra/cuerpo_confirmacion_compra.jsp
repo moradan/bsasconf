@@ -36,7 +36,7 @@
             </section>
             
             <!-- botones -->
-            <jsp:include page="../componentes/botones_pagina_confirmacion.jsp"/>
+            <a class="btn btn-success form-control" href="./compra.jsp">Ok</a>
         </div>
     </div>
 </main>
