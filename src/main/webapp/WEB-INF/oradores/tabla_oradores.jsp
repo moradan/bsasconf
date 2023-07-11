@@ -24,19 +24,12 @@
                     ${orador.fechaAlta}
                 </td>
                 <td>
-                    <i class="btn btn-light bi bi-pencil-fill" data-id="${'id'.concat(orador.id)}" data-accion="editar"></i>
+                    <a class="btn btn-light bi bi-pencil-fill" href="${pageContext.request.contextPath}/editarBorrar?accion=editar&id=${orador.id}"></a>
                 </td>
                 <td>
-                    <i class="btn btn-light bi bi-trash-fill" data-id="${'id'.concat(orador.id)}" data-accion="borrar"></i>
+                    <a class="btn btn-light bi bi-trash-fill" href="${pageContext.request.contextPath}/editarBorrar?accion=borrar&id=${orador.id}"></a>
                 </td>
             </tr>
         </c:forEach>
     </tbody>
 </table>
-   
-
-<form id="formulario-datos" action="editarBorrar">
-    <input type="hidden" name="inicio" value="${param.inicio}}"/>
-    <input id="campo-id" name="campoId" value="" type="hidden"/>
-    <input id="campo-bandera" name="campoBandera" value="" type="hidden"/>
-</form>

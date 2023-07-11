@@ -23,8 +23,8 @@ public class ServletBorrarOrador extends HttpServlet{
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         // Comunicarse con el modelo para escribir en base de datos.
         ModeloMySql modelo = new ModeloMySql();
-
-        modelo.removeOrador(Integer.parseInt(req.getParameter("campoId")));
+        int id = Integer.parseInt(req.getParameter("id"));
+        modelo.removeOrador(id);
         req.getRequestDispatcher("/listarOradores").forward(req, resp);
     }
 }

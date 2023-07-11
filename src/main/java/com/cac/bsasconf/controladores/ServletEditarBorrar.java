@@ -14,13 +14,12 @@ public class ServletEditarBorrar extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        String bandera = req.getParameter("campoBandera");
+        String accion = req.getParameter("accion");
+        String id = req.getParameter("id");
         ModeloMySql modelo = new ModeloMySql();
-        String id = req.getParameter("campoId");
-        
         Orador oradorObjetivo = modelo.getOrador(Integer.parseInt(id));
         
         req.setAttribute("oradorObjetivo", oradorObjetivo);
-        req.getRequestDispatcher("./WEB-INF/" + bandera + "_orador.jsp").forward(req, resp);
+        req.getRequestDispatcher("./WEB-INF/" + accion +"_orador.jsp").forward(req, resp);
     }
 }

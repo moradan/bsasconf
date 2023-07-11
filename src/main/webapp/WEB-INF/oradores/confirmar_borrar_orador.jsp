@@ -19,15 +19,14 @@
                     </div>
                 </div>
             </div>
-            <form class="row g-3 mb-3" action="borrar">
-                <input type="hidden" name="campoId" value="${oradorObjetivo.id}">
+            <div class="row g-3 mb-3">
                 <div class="col-6">
-                    <button class="btn btn-danger form-control" onclick="history.back()" type="button">Conservar Orador</button>
+                    <a class="btn btn-danger form-control" href="${pageContext.request.contextPath}/listarOradores">Conservar Orador</a>
                 </div>
                 <div class="col-6">
-                    <button class="btn btn-success form-control" type="submit" value="Borrar Orador">Borrar Orador</button>
+                    <a class="btn btn-success form-control" href="${pageContext.request.contextPath}/borrar?id=${oradorObjetivo.id}" >Borrar Orador</a>
                 </div>
-            </form>
+            </div>
         </div>
     </section>
 </main>

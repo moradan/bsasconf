@@ -12,7 +12,7 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpSession;
 import java.io.IOException;
 
-@WebFilter(filterName="filtroLogin", urlPatterns={"/listarOradores", "/editarBorrar"})
+@WebFilter(filterName="filtroLogin", urlPatterns={"/listarOradores", "/editarBorrar", "/borrar"})
 public class FilterLogin implements Filter {
 
     @Override
@@ -28,8 +28,10 @@ public class FilterLogin implements Filter {
         if (sesion != null && sesion.getAttribute("usuarioLogueado") != null) {
             fc.doFilter(sr, sr1);
         } else {
-            String origen = httpRequest.getServletPath();
-            String queryString = "?origen=" + origen;
+            String id = sr.getParameter("id");
+            String destino = httpRequest.getServletPath();
+            String accion = sr.getParameter("accion");
+            String queryString = "?destino=" + destino + "&id=" + id + "&accion=" + accion;
             sr.getRequestDispatcher("/login" + queryString).forward(sr, sr1);
         }
     }
