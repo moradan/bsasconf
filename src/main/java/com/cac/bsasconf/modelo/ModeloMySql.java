@@ -6,8 +6,6 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
 public class ModeloMySql implements Modelo {
      
@@ -84,28 +82,23 @@ public class ModeloMySql implements Modelo {
 
     @Override
     public int updateOrador(Orador orador) {
-        
-        if (orador.getId() == 0){
-            return addOrador(orador);
-        } else {
-            try {
-                // Establezco conexion con la base de datos
-                Connection conexion = Conexion.getConnection();
-                
-                // Preparo la sentencia sql
-                String sql = "UPDATE `oradores` SET `nombre` = ?, `apellido` = ?, `charla` = ? WHERE `id` = ?";
-                PreparedStatement ps = conexion.prepareStatement(sql);
-                ps.setString(1, orador.getNombre());
-                ps.setString(2, orador.getApellido());
-                ps.setString(3, orador.getCharla());
-                ps.setInt(4, orador.getId());
-                
-                // Ejecuto el update y termino el metodo
-                return ps.executeUpdate();
-                
-            } catch (SQLException ex) {
-                throw new RuntimeException("No se pudo establecer la conexion con MySQL");
-            }
+        try {
+            // Establezco conexion con la base de datos
+            Connection conexion = Conexion.getConnection();
+
+            // Preparo la sentencia sql
+            String sql = "UPDATE `oradores` SET `nombre` = ?, `apellido` = ?, `charla` = ? WHERE `id` = ?";
+            PreparedStatement ps = conexion.prepareStatement(sql);
+            ps.setString(1, orador.getNombre());
+            ps.setString(2, orador.getApellido());
+            ps.setString(3, orador.getCharla());
+            ps.setInt(4, orador.getId());
+
+            // Ejecuto el update y termino el metodo
+            return ps.executeUpdate();
+
+        } catch (SQLException ex) {
+            throw new RuntimeException(ex.getMessage());
         }
     }
 

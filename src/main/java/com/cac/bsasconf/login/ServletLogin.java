@@ -39,7 +39,6 @@ public class ServletLogin extends HttpServlet {
             String accion = req.getParameter("accion");
             String queryString = "?id=" + id + "&accion=" + accion;
             resp.sendRedirect(req.getContextPath() + destino + queryString);
-            
         } else {
             req.setAttribute("huboError", true);
             doGet(req, resp);
