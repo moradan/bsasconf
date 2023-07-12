@@ -29,7 +29,7 @@ public class ModeloMySql implements Modelo {
 
             return listaOradores;
         } catch(SQLException ex) {
-           throw new RuntimeException("Error al leer oradores de MySQL", ex);
+           throw new RuntimeException(ex.getMessage());
         }
     }
 
