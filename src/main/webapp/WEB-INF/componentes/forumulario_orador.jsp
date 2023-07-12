@@ -1,8 +1,9 @@
 <!-- import para hacer uso de jakarta standard tag library -->
 <%@ taglib uri = "http://java.sun.com/jsp/jstl/core" prefix = "c" %>
 
-<form id="formulario_orador" action="agregarActualizar">
-    <input type="hidden" id="campo-id" name="campoId" value="${oradorObjetivo.id}"/>
+<form id="formulario_orador" action="${param.accion}">
+    <input type="hidden" name="id" value="${oradorObjetivo.id}"/>
+    <input type="hidden" name="fechaAlta" value="${oradorObjetivo.fechaAlta}"/>
     <div class="row">
         <div class="col-12 col-md-6 mb-2">
             <input type="text" class="form-control" name="campoNombre" id="campo-nombre" placeholder="Nombre" value="${oradorObjetivo.nombre}" required>

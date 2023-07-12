@@ -5,7 +5,9 @@
                 Editando los detalles del orador y la charla
             </h1>
             
-            <jsp:include page="../componentes/forumulario_orador.jsp"/>
+            <jsp:include page="../componentes/forumulario_orador.jsp">
+                <jsp:param name="accion" value="actualizar"/>
+            </jsp:include>
             <jsp:include page="../componentes/botones_editar_orador.jsp"/>
         </div>
     </div>

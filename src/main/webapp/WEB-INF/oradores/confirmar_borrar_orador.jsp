@@ -21,10 +21,10 @@
             </div>
             <div class="row g-3 mb-3">
                 <div class="col-6">
-                    <a class="btn btn-danger form-control" href="${pageContext.request.contextPath}/listarOradores">Conservar Orador</a>
+                    <a class="btn btn-success form-control" href="${pageContext.request.contextPath}/listarOradores">Conservar Orador</a>
                 </div>
                 <div class="col-6">
-                    <a class="btn btn-success form-control" href="${pageContext.request.contextPath}/borrar?id=${oradorObjetivo.id}" >Borrar Orador</a>
+                    <a class="btn btn-danger form-control" href="${pageContext.request.contextPath}/borrar?id=${oradorObjetivo.id}" >Borrar Orador</a>
                 </div>
             </div>
         </div>
