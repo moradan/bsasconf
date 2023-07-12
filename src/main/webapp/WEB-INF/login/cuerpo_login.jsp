@@ -2,10 +2,10 @@
     <div class="col-11 col-md-10 col-lg-8 col-xl-7">
     
         <!-- Cabecera y enunciado -->
-        <jsp:include page="./titulo.jsp"/>
+        <jsp:include page="./titulo_login.jsp"/>
         
         <!-- formulario para registrar credenciales-->
-        <jsp:include page="./formulario.jsp"/>
+        <jsp:include page="./formulario_login.jsp"/>
     
     </div>
 </main>

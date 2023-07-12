@@ -38,7 +38,7 @@ public class FilterLogin implements Filter {
 
     @Override
     public void destroy() {
-        Filter.super.destroy(); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/OverriddenMethodBody
+        Filter.super.destroy();
     }
     
 }

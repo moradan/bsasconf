@@ -1,6 +1,3 @@
-<!-- import para hacer uso de jakarta standard tag library -->
-<%@ taglib uri = "http://java.sun.com/jsp/jstl/core" prefix = "c" %>
-
 <form id="formulario_orador" action="${param.accion}">
     <input type="hidden" name="id" value="${oradorObjetivo.id}"/>
     <input type="hidden" name="fechaAlta" value="${oradorObjetivo.fechaAlta}"/>

@@ -11,7 +11,7 @@
     <jsp:include page="./componentes/barra_navegacion.jsp"/>
 
     <!-- Cuerpo de la pagina de login -->
-    <jsp:include page="./login/cuerpo.jsp"/>
+    <jsp:include page="./login/cuerpo_login.jsp"/>
     
     <!-- Pie con vinculos a otros recursos -->
     <jsp:include page="./componentes/pie_pagina.jsp"/>
