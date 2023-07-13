@@ -1,4 +1,3 @@
-
 package com.cac.bsasconf.filter;
 
 import jakarta.servlet.Filter;
@@ -28,10 +27,8 @@ public class FilterLogin implements Filter {
         if (sesion != null && sesion.getAttribute("usuarioLogueado") != null) {
             fc.doFilter(sr, sr1);
         } else {
-            String id = sr.getParameter("id");
             String destino = httpRequest.getServletPath();
-            String accion = sr.getParameter("accion");
-            String queryString = "?destino=" + destino + "&id=" + id + "&accion=" + accion;
+            String queryString = "?destino=" + destino;
             sr.getRequestDispatcher("/login" + queryString).forward(sr, sr1);
         }
     }

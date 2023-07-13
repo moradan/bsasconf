@@ -24,7 +24,6 @@ public class ServletAgregar extends HttpServlet {
         String apellido = req.getParameter("campoApellido");
         String charla = req.getParameter("campoCharla");
         
-        
         Orador oradorParaAgregar = new Orador(0, nombre, apellido, charla, hoy);
         
         // Comunicarse con el modelo para escribir en base de datos.

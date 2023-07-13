@@ -15,6 +15,6 @@ public class ListarOradores extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         ModeloMySql modelo = new ModeloMySql();
         req.setAttribute("listaOradores", modelo.getOradores());
-        req.getRequestDispatcher("./WEB-INF/lista_oradores.jsp").forward(req, resp);
+        req.getRequestDispatcher("./WEB-INF/listar_oradores.jsp").forward(req, resp);
     }
 }
