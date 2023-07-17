@@ -1,9 +1,6 @@
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 
 <form action="${pageContext.request.contextPath}/login" method="post" class="container-fluid px-0">
-    <input type="hidden" name="destino" value="${destino}"/>
-    <input type="hidden" name="id" value="${id}"/>
-    <input type="hidden" name="accion" value="${accion}"/>
     <section class="row g-0 mb-3">
         <div class="col-lg-5">
             <label class="mb-1" for="campo-usuario">Usuario</label>
@@ -23,7 +20,7 @@
     </c:if>
     <section class="row gx-3 mb-3">
         <div class="col-6 col-md-2">
-            <input onclick="history.back();" class="btn btn-success form-control" type="button" value="Volver"/>
+            <a href="./index.jsp" class="btn btn-success form-control" type="button">Volver</a>
         </div>
         <div class="col-6 col-md-2">
             <input class="btn btn-success form-control" type="submit" value="Ingresar"/>

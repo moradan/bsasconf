@@ -14,8 +14,6 @@ public class ServletLogin extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        String destino = req.getParameter("destino");
-        req.setAttribute("destino", destino);
         req.getRequestDispatcher("/WEB-INF/login.jsp").forward(req, resp);
     }
 
@@ -26,12 +24,11 @@ public class ServletLogin extends HttpServlet {
         UsuarioDTO usuario = new UsuarioDTO(nombreUsuario, password);
         
         if(usuario.autenticar()){
-            String destino = req.getParameter("destino");
             HttpSession session = req.getSession(); 
             session.setMaxInactiveInterval(60);
             session.setAttribute("usuarioLogueado", usuario);
             
-            resp.sendRedirect(req.getContextPath() + destino);
+            resp.sendRedirect("./listarOradores");
         } else {
             req.setAttribute("huboError", true);
             doGet(req, resp);

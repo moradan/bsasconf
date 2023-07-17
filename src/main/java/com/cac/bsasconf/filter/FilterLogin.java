@@ -11,7 +11,7 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpSession;
 import java.io.IOException;
 
-@WebFilter(filterName="filtroLogin", urlPatterns={"/listarOradores"})
+@WebFilter(filterName="filtroLogin", urlPatterns={"/listarOradores", "/borrar", "/actualizar"})
 public class FilterLogin implements Filter {
 
     @Override
@@ -37,5 +37,4 @@ public class FilterLogin implements Filter {
     public void destroy() {
         Filter.super.destroy();
     }
-    
 }
